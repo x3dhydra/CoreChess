@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'CoreChess' target in the 'CoreChess' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
