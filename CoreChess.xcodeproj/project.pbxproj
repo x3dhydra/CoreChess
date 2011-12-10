@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191FC1DB1494056A00FB4F8E /* CCBitboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D21494056A00FB4F8E /* CCBitboard.h */; };
-		191FC1DC1494056A00FB4F8E /* CCBitboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D31494056A00FB4F8E /* CCBitboard.m */; };
-		191FC1DD1494056A00FB4F8E /* CCBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D41494056A00FB4F8E /* CCBoard.h */; };
-		191FC1DE1494056A00FB4F8E /* CCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D51494056A00FB4F8E /* CCBoard.m */; };
-		191FC1DF1494056A00FB4F8E /* CCCastlingRights.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D61494056A00FB4F8E /* CCCastlingRights.h */; };
-		191FC1E01494056A00FB4F8E /* CCPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D71494056A00FB4F8E /* CCPiece.h */; };
-		191FC1E11494056A00FB4F8E /* CCPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D81494056A00FB4F8E /* CCPiece.m */; };
-		191FC1E21494056A00FB4F8E /* CCSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D91494056A00FB4F8E /* CCSquare.h */; };
-		191FC1E31494056A00FB4F8E /* CCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1DA1494056A00FB4F8E /* CCSquare.m */; };
+		191FC1EE149407B100FB4F8E /* CCBitboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E5149407B100FB4F8E /* CCBitboard.h */; };
+		191FC1EF149407B100FB4F8E /* CCBitboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1E6149407B100FB4F8E /* CCBitboard.m */; };
+		191FC1F0149407B100FB4F8E /* CCBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E7149407B100FB4F8E /* CCBoard.h */; };
+		191FC1F1149407B100FB4F8E /* CCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1E8149407B100FB4F8E /* CCBoard.m */; };
+		191FC1F2149407B100FB4F8E /* CCCastlingRights.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E9149407B100FB4F8E /* CCCastlingRights.h */; };
+		191FC1F3149407B100FB4F8E /* CCPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EA149407B100FB4F8E /* CCPiece.h */; };
+		191FC1F4149407B100FB4F8E /* CCPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1EB149407B100FB4F8E /* CCPiece.m */; };
+		191FC1F5149407B100FB4F8E /* CCSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EC149407B100FB4F8E /* CCSquare.h */; };
+		191FC1F6149407B100FB4F8E /* CCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1ED149407B100FB4F8E /* CCSquare.m */; };
 		19F27747146DAA7200B58AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27746146DAA7200B58AB1 /* Foundation.framework */; };
 		19F27755146DAA7200B58AB1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27754146DAA7200B58AB1 /* SenTestingKit.framework */; };
 		19F27757146DAA7200B58AB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27756146DAA7200B58AB1 /* UIKit.framework */; };
@@ -36,15 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		191FC1D21494056A00FB4F8E /* CCBitboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBitboard.h; path = Core/CCBitboard.h; sourceTree = "<group>"; };
-		191FC1D31494056A00FB4F8E /* CCBitboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBitboard.m; path = Core/CCBitboard.m; sourceTree = "<group>"; };
-		191FC1D41494056A00FB4F8E /* CCBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBoard.h; path = Core/CCBoard.h; sourceTree = "<group>"; };
-		191FC1D51494056A00FB4F8E /* CCBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBoard.m; path = Core/CCBoard.m; sourceTree = "<group>"; };
-		191FC1D61494056A00FB4F8E /* CCCastlingRights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCastlingRights.h; path = Core/CCCastlingRights.h; sourceTree = "<group>"; };
-		191FC1D71494056A00FB4F8E /* CCPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPiece.h; path = Core/CCPiece.h; sourceTree = "<group>"; };
-		191FC1D81494056A00FB4F8E /* CCPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPiece.m; path = Core/CCPiece.m; sourceTree = "<group>"; };
-		191FC1D91494056A00FB4F8E /* CCSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSquare.h; path = Core/CCSquare.h; sourceTree = "<group>"; };
-		191FC1DA1494056A00FB4F8E /* CCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSquare.m; path = Core/CCSquare.m; sourceTree = "<group>"; };
+		191FC1E5149407B100FB4F8E /* CCBitboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBitboard.h; sourceTree = "<group>"; };
+		191FC1E6149407B100FB4F8E /* CCBitboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBitboard.m; sourceTree = "<group>"; };
+		191FC1E7149407B100FB4F8E /* CCBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBoard.h; sourceTree = "<group>"; };
+		191FC1E8149407B100FB4F8E /* CCBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBoard.m; sourceTree = "<group>"; };
+		191FC1E9149407B100FB4F8E /* CCCastlingRights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCastlingRights.h; sourceTree = "<group>"; };
+		191FC1EA149407B100FB4F8E /* CCPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPiece.h; sourceTree = "<group>"; };
+		191FC1EB149407B100FB4F8E /* CCPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCPiece.m; sourceTree = "<group>"; };
+		191FC1EC149407B100FB4F8E /* CCSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSquare.h; sourceTree = "<group>"; };
+		191FC1ED149407B100FB4F8E /* CCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSquare.m; sourceTree = "<group>"; };
 		19F27743146DAA7200B58AB1 /* libCoreChess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreChess.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F27746146DAA7200B58AB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19F2774A146DAA7200B58AB1 /* CoreChess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreChess-Prefix.pch"; sourceTree = "<group>"; };
@@ -81,20 +81,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		191FC1D01494052500FB4F8E /* Core */ = {
+		191FC1E4149407B100FB4F8E /* CoreChess */ = {
 			isa = PBXGroup;
 			children = (
-				191FC1D21494056A00FB4F8E /* CCBitboard.h */,
-				191FC1D31494056A00FB4F8E /* CCBitboard.m */,
-				191FC1D41494056A00FB4F8E /* CCBoard.h */,
-				191FC1D51494056A00FB4F8E /* CCBoard.m */,
-				191FC1D61494056A00FB4F8E /* CCCastlingRights.h */,
-				191FC1D71494056A00FB4F8E /* CCPiece.h */,
-				191FC1D81494056A00FB4F8E /* CCPiece.m */,
-				191FC1D91494056A00FB4F8E /* CCSquare.h */,
-				191FC1DA1494056A00FB4F8E /* CCSquare.m */,
+				191FC1E5149407B100FB4F8E /* CCBitboard.h */,
+				191FC1E6149407B100FB4F8E /* CCBitboard.m */,
+				191FC1E7149407B100FB4F8E /* CCBoard.h */,
+				191FC1E8149407B100FB4F8E /* CCBoard.m */,
+				191FC1E9149407B100FB4F8E /* CCCastlingRights.h */,
+				191FC1EA149407B100FB4F8E /* CCPiece.h */,
+				191FC1EB149407B100FB4F8E /* CCPiece.m */,
+				191FC1EC149407B100FB4F8E /* CCSquare.h */,
+				191FC1ED149407B100FB4F8E /* CCSquare.m */,
 			);
-			name = Core;
+			path = CoreChess;
 			sourceTree = "<group>";
 		};
 		19F27738146DAA7100B58AB1 = {
@@ -129,7 +129,7 @@
 		19F27748146DAA7200B58AB1 /* CoreChess */ = {
 			isa = PBXGroup;
 			children = (
-				191FC1D01494052500FB4F8E /* Core */,
+				191FC1E4149407B100FB4F8E /* CoreChess */,
 				19F2774B146DAA7200B58AB1 /* CoreChess.h */,
 				19F27749146DAA7200B58AB1 /* Supporting Files */,
 			);
@@ -170,11 +170,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191FC1DB1494056A00FB4F8E /* CCBitboard.h in Headers */,
-				191FC1DD1494056A00FB4F8E /* CCBoard.h in Headers */,
-				191FC1DF1494056A00FB4F8E /* CCCastlingRights.h in Headers */,
-				191FC1E01494056A00FB4F8E /* CCPiece.h in Headers */,
-				191FC1E21494056A00FB4F8E /* CCSquare.h in Headers */,
+				191FC1EE149407B100FB4F8E /* CCBitboard.h in Headers */,
+				191FC1F0149407B100FB4F8E /* CCBoard.h in Headers */,
+				191FC1F2149407B100FB4F8E /* CCCastlingRights.h in Headers */,
+				191FC1F3149407B100FB4F8E /* CCPiece.h in Headers */,
+				191FC1F5149407B100FB4F8E /* CCSquare.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				191FC1DC1494056A00FB4F8E /* CCBitboard.m in Sources */,
-				191FC1DE1494056A00FB4F8E /* CCBoard.m in Sources */,
-				191FC1E11494056A00FB4F8E /* CCPiece.m in Sources */,
-				191FC1E31494056A00FB4F8E /* CCSquare.m in Sources */,
+				191FC1EF149407B100FB4F8E /* CCBitboard.m in Sources */,
+				191FC1F1149407B100FB4F8E /* CCBoard.m in Sources */,
+				191FC1F4149407B100FB4F8E /* CCPiece.m in Sources */,
+				191FC1F6149407B100FB4F8E /* CCSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
