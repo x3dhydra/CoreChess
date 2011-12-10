@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191FC1DB1494056A00FB4F8E /* CCBitboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D21494056A00FB4F8E /* CCBitboard.h */; };
+		191FC1DC1494056A00FB4F8E /* CCBitboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D31494056A00FB4F8E /* CCBitboard.m */; };
+		191FC1DD1494056A00FB4F8E /* CCBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D41494056A00FB4F8E /* CCBoard.h */; };
+		191FC1DE1494056A00FB4F8E /* CCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D51494056A00FB4F8E /* CCBoard.m */; };
+		191FC1DF1494056A00FB4F8E /* CCCastlingRights.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D61494056A00FB4F8E /* CCCastlingRights.h */; };
+		191FC1E01494056A00FB4F8E /* CCPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D71494056A00FB4F8E /* CCPiece.h */; };
+		191FC1E11494056A00FB4F8E /* CCPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1D81494056A00FB4F8E /* CCPiece.m */; };
+		191FC1E21494056A00FB4F8E /* CCSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1D91494056A00FB4F8E /* CCSquare.h */; };
+		191FC1E31494056A00FB4F8E /* CCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1DA1494056A00FB4F8E /* CCSquare.m */; };
 		19F27747146DAA7200B58AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27746146DAA7200B58AB1 /* Foundation.framework */; };
-		19F2774D146DAA7200B58AB1 /* CoreChess.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F2774C146DAA7200B58AB1 /* CoreChess.m */; };
 		19F27755146DAA7200B58AB1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27754146DAA7200B58AB1 /* SenTestingKit.framework */; };
 		19F27757146DAA7200B58AB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27756146DAA7200B58AB1 /* UIKit.framework */; };
 		19F27758146DAA7200B58AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27746146DAA7200B58AB1 /* Foundation.framework */; };
@@ -28,17 +36,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191FC1D21494056A00FB4F8E /* CCBitboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBitboard.h; path = Core/CCBitboard.h; sourceTree = "<group>"; };
+		191FC1D31494056A00FB4F8E /* CCBitboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBitboard.m; path = Core/CCBitboard.m; sourceTree = "<group>"; };
+		191FC1D41494056A00FB4F8E /* CCBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCBoard.h; path = Core/CCBoard.h; sourceTree = "<group>"; };
+		191FC1D51494056A00FB4F8E /* CCBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCBoard.m; path = Core/CCBoard.m; sourceTree = "<group>"; };
+		191FC1D61494056A00FB4F8E /* CCCastlingRights.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCCastlingRights.h; path = Core/CCCastlingRights.h; sourceTree = "<group>"; };
+		191FC1D71494056A00FB4F8E /* CCPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPiece.h; path = Core/CCPiece.h; sourceTree = "<group>"; };
+		191FC1D81494056A00FB4F8E /* CCPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPiece.m; path = Core/CCPiece.m; sourceTree = "<group>"; };
+		191FC1D91494056A00FB4F8E /* CCSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCSquare.h; path = Core/CCSquare.h; sourceTree = "<group>"; };
+		191FC1DA1494056A00FB4F8E /* CCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCSquare.m; path = Core/CCSquare.m; sourceTree = "<group>"; };
 		19F27743146DAA7200B58AB1 /* libCoreChess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreChess.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F27746146DAA7200B58AB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		19F2774A146DAA7200B58AB1 /* CoreChess-Prefix.pch */ = {isa = PBXFileReference; path = "CoreChess-Prefix.pch"; sourceTree = "<group>"; };
-		19F2774B146DAA7200B58AB1 /* CoreChess.h */ = {isa = PBXFileReference; path = CoreChess.h; sourceTree = "<group>"; };
-		19F2774C146DAA7200B58AB1 /* CoreChess.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreChess.m; sourceTree = "<group>"; };
+		19F2774A146DAA7200B58AB1 /* CoreChess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreChess-Prefix.pch"; sourceTree = "<group>"; };
+		19F2774B146DAA7200B58AB1 /* CoreChess.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreChess.h; sourceTree = "<group>"; };
 		19F27753146DAA7200B58AB1 /* CoreChessTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreChessTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F27754146DAA7200B58AB1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		19F27756146DAA7200B58AB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		19F2775E146DAA7200B58AB1 /* CoreChessTests-Info.plist */ = {isa = PBXFileReference; path = "CoreChessTests-Info.plist"; sourceTree = "<group>"; };
+		19F2775E146DAA7200B58AB1 /* CoreChessTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreChessTests-Info.plist"; sourceTree = "<group>"; };
 		19F27760146DAA7200B58AB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		19F27762146DAA7200B58AB1 /* CoreChessTests.h */ = {isa = PBXFileReference; path = CoreChessTests.h; sourceTree = "<group>"; };
+		19F27762146DAA7200B58AB1 /* CoreChessTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreChessTests.h; sourceTree = "<group>"; };
 		19F27763146DAA7200B58AB1 /* CoreChessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreChessTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +81,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191FC1D01494052500FB4F8E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				191FC1D21494056A00FB4F8E /* CCBitboard.h */,
+				191FC1D31494056A00FB4F8E /* CCBitboard.m */,
+				191FC1D41494056A00FB4F8E /* CCBoard.h */,
+				191FC1D51494056A00FB4F8E /* CCBoard.m */,
+				191FC1D61494056A00FB4F8E /* CCCastlingRights.h */,
+				191FC1D71494056A00FB4F8E /* CCPiece.h */,
+				191FC1D81494056A00FB4F8E /* CCPiece.m */,
+				191FC1D91494056A00FB4F8E /* CCSquare.h */,
+				191FC1DA1494056A00FB4F8E /* CCSquare.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		19F27738146DAA7100B58AB1 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +129,8 @@
 		19F27748146DAA7200B58AB1 /* CoreChess */ = {
 			isa = PBXGroup;
 			children = (
+				191FC1D01494052500FB4F8E /* Core */,
 				19F2774B146DAA7200B58AB1 /* CoreChess.h */,
-				19F2774C146DAA7200B58AB1 /* CoreChess.m */,
 				19F27749146DAA7200B58AB1 /* Supporting Files */,
 			);
 			path = CoreChess;
@@ -138,6 +170,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191FC1DB1494056A00FB4F8E /* CCBitboard.h in Headers */,
+				191FC1DD1494056A00FB4F8E /* CCBoard.h in Headers */,
+				191FC1DF1494056A00FB4F8E /* CCCastlingRights.h in Headers */,
+				191FC1E01494056A00FB4F8E /* CCPiece.h in Headers */,
+				191FC1E21494056A00FB4F8E /* CCSquare.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19F2774D146DAA7200B58AB1 /* CoreChess.m in Sources */,
+				191FC1DC1494056A00FB4F8E /* CCBitboard.m in Sources */,
+				191FC1DE1494056A00FB4F8E /* CCBoard.m in Sources */,
+				191FC1E11494056A00FB4F8E /* CCPiece.m in Sources */,
+				191FC1E31494056A00FB4F8E /* CCSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +428,7 @@
 				19F27769146DAA7200B58AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19F2776A146DAA7200B58AB1 /* Build configuration list for PBXNativeTarget "CoreChessTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +437,7 @@
 				19F2776C146DAA7200B58AB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
