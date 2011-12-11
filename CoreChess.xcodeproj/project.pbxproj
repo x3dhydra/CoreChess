@@ -18,6 +18,12 @@
 		191FC1F6149407B100FB4F8E /* CCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1ED149407B100FB4F8E /* CCSquare.m */; };
 		191FC202149431C000FB4F8E /* CCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC201149431C000FB4F8E /* CCPosition.m */; };
 		191FC204149431CF00FB4F8E /* CCPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC203149431CF00FB4F8E /* CCPosition.h */; };
+		191FC23A14946D5A00FB4F8E /* CCBitboard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23614946D5900FB4F8E /* CCBitboard+MoveGeneration.h */; };
+		191FC23B14946D5A00FB4F8E /* CCBitboard+MoveGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC23714946D5900FB4F8E /* CCBitboard+MoveGeneration.m */; };
+		191FC23C14946D5A00FB4F8E /* CCBoard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23814946D5900FB4F8E /* CCBoard+MoveGeneration.h */; };
+		191FC23D14946D5A00FB4F8E /* CCBoard+MoveGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC23914946D5900FB4F8E /* CCBoard+MoveGeneration.m */; };
+		191FC24914946FE300FB4F8E /* CKPosition+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC24714946FE300FB4F8E /* CKPosition+Private.h */; };
+		191FC24A14946FE300FB4F8E /* CKPosition+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC24814946FE300FB4F8E /* CKPosition+Private.m */; };
 		19F27747146DAA7200B58AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27746146DAA7200B58AB1 /* Foundation.framework */; };
 		19F27755146DAA7200B58AB1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27754146DAA7200B58AB1 /* SenTestingKit.framework */; };
 		19F27757146DAA7200B58AB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27756146DAA7200B58AB1 /* UIKit.framework */; };
@@ -49,6 +55,12 @@
 		191FC1ED149407B100FB4F8E /* CCSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSquare.m; sourceTree = "<group>"; };
 		191FC201149431C000FB4F8E /* CCPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCPosition.m; path = CoreChess/CCPosition.m; sourceTree = "<group>"; };
 		191FC203149431CF00FB4F8E /* CCPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCPosition.h; path = CoreChess/CCPosition.h; sourceTree = "<group>"; };
+		191FC23614946D5900FB4F8E /* CCBitboard+MoveGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCBitboard+MoveGeneration.h"; sourceTree = "<group>"; };
+		191FC23714946D5900FB4F8E /* CCBitboard+MoveGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCBitboard+MoveGeneration.m"; sourceTree = "<group>"; };
+		191FC23814946D5900FB4F8E /* CCBoard+MoveGeneration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCBoard+MoveGeneration.h"; sourceTree = "<group>"; };
+		191FC23914946D5900FB4F8E /* CCBoard+MoveGeneration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCBoard+MoveGeneration.m"; sourceTree = "<group>"; };
+		191FC24714946FE300FB4F8E /* CKPosition+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CKPosition+Private.h"; path = "../ChessKit/ChessKit/CKPosition+Private.h"; sourceTree = "<group>"; };
+		191FC24814946FE300FB4F8E /* CKPosition+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CKPosition+Private.m"; path = "../ChessKit/ChessKit/CKPosition+Private.m"; sourceTree = "<group>"; };
 		19F27743146DAA7200B58AB1 /* libCoreChess.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCoreChess.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F27746146DAA7200B58AB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		19F2774A146DAA7200B58AB1 /* CoreChess-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreChess-Prefix.pch"; sourceTree = "<group>"; };
@@ -88,6 +100,10 @@
 		191FC1E4149407B100FB4F8E /* CoreChess */ = {
 			isa = PBXGroup;
 			children = (
+				191FC23614946D5900FB4F8E /* CCBitboard+MoveGeneration.h */,
+				191FC23714946D5900FB4F8E /* CCBitboard+MoveGeneration.m */,
+				191FC23814946D5900FB4F8E /* CCBoard+MoveGeneration.h */,
+				191FC23914946D5900FB4F8E /* CCBoard+MoveGeneration.m */,
 				191FC1E5149407B100FB4F8E /* CCBitboard.h */,
 				191FC1E6149407B100FB4F8E /* CCBitboard.m */,
 				191FC1E7149407B100FB4F8E /* CCBoard.h */,
@@ -113,6 +129,8 @@
 		19F27738146DAA7100B58AB1 = {
 			isa = PBXGroup;
 			children = (
+				191FC24714946FE300FB4F8E /* CKPosition+Private.h */,
+				191FC24814946FE300FB4F8E /* CKPosition+Private.m */,
 				19F27748146DAA7200B58AB1 /* CoreChess */,
 				19F2775C146DAA7200B58AB1 /* CoreChessTests */,
 				19F27745146DAA7200B58AB1 /* Frameworks */,
@@ -190,6 +208,9 @@
 				191FC1F3149407B100FB4F8E /* CCPiece.h in Headers */,
 				191FC1F5149407B100FB4F8E /* CCSquare.h in Headers */,
 				191FC204149431CF00FB4F8E /* CCPosition.h in Headers */,
+				191FC23A14946D5A00FB4F8E /* CCBitboard+MoveGeneration.h in Headers */,
+				191FC23C14946D5A00FB4F8E /* CCBoard+MoveGeneration.h in Headers */,
+				191FC24914946FE300FB4F8E /* CKPosition+Private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +317,9 @@
 				191FC1F4149407B100FB4F8E /* CCPiece.m in Sources */,
 				191FC1F6149407B100FB4F8E /* CCSquare.m in Sources */,
 				191FC202149431C000FB4F8E /* CCPosition.m in Sources */,
+				191FC23B14946D5A00FB4F8E /* CCBitboard+MoveGeneration.m in Sources */,
+				191FC23D14946D5A00FB4F8E /* CCBoard+MoveGeneration.m in Sources */,
+				191FC24A14946FE300FB4F8E /* CKPosition+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
