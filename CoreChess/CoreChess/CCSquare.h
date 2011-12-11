@@ -9,6 +9,10 @@
 #ifndef CCSQUARE_H
 #define CCSQUARE_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #import <Foundation/Foundation.h>
 #import <CoreFoundation/CoreFoundation.h>
 
@@ -34,6 +38,7 @@ extern CCSquare CCSquareMake(signed char rank, signed char file);
 /* Takes a string of two characters corresponding to the algebraic
  notation and converts it to a CCSquare */
 extern CCSquare CCSquareForString(CFStringRef name);
+extern CCSquare CCSquareMakeForString(const char * name);
 /* Returns the rank of a CCSquare */
 extern int CCSquareRank(CCSquare);
 /* Returns the file of a CCSquare */
@@ -44,22 +49,26 @@ extern BOOL CCSquareIsValid(CCSquare square);
 
 /* Returns a string with the algebraic notation representation of a 
  CCSquare corresponding to the passed rank and file. */
-CFStringRef CCSquareNameForRankAndFile(int rank, int file);
+extern CFStringRef CCSquareNameForRankAndFile(int rank, int file);
 /* Returns a string with the algebraic notation representation of a CCSquare */
-CFStringRef CCSquareName(CCSquare);
+extern CFStringRef CCSquareName(CCSquare);
 
 /* Basic shifts for squares */
-CCSquare CCSquareNorthOne(CCSquare s);
-CCSquare CCSquareSouthOne(CCSquare s);
-CCSquare CCSquareEastOne(CCSquare s);
-CCSquare CCSquareWestOne(CCSquare s);
-CCSquare CCSquareNorthEastOne(CCSquare s);
-CCSquare CCSquareNorthWestOne(CCSquare s);
-CCSquare CCSquareSouthEastOne(CCSquare s);
-CCSquare CCSquareSouthWestOne(CCSquare s);
+extern CCSquare CCSquareNorthOne(CCSquare s);
+extern CCSquare CCSquareSouthOne(CCSquare s);
+extern CCSquare CCSquareEastOne(CCSquare s);
+extern CCSquare CCSquareWestOne(CCSquare s);
+extern CCSquare CCSquareNorthEastOne(CCSquare s);
+extern CCSquare CCSquareNorthWestOne(CCSquare s);
+extern CCSquare CCSquareSouthEastOne(CCSquare s);
+extern CCSquare CCSquareSouthWestOne(CCSquare s);
 
 /* Validates that the CCSquare is between a1 and h8, and throws an 
  Invalid_Square_Exception otherwise */
 inline BOOL in_range(CCSquare s) { return ((a1 <= s) && (h8 >= s)); }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

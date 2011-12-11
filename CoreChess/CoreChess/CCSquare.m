@@ -24,14 +24,7 @@ CCSquare CCSquareMake(signed char rank, signed char file) {
 
 CCSquare CCSquareForString(CFStringRef name)
 {
-    NSString *string = (NSString *)name;
-    if (![string length] == 2)
-        return InvalidSquare;
-    
-    signed char file = (signed char)([string characterAtIndex:0] - 'a');
-    signed char rank = (signed char)([string characterAtIndex:1] - '1');
-    
-    return CCSquareMake(rank, file);
+    return CCSquareMakeForString(CFStringGetCStringPtr(name, kCFStringEncodingUTF8));    
 }
 
 /* Creates a CCSquare from a string representation of the CCSquare.  */
@@ -64,7 +57,7 @@ CFStringRef CCSquareName(CCSquare s)
         tmp[0] = file + 'a';
         tmp[1] = rank + '1';
         
-        name = (CFStringRef)[NSString stringWithCString:tmp encoding:NSUTF8StringEncoding];
+        name = (__bridge CFStringRef)[NSString stringWithCString:tmp encoding:NSUTF8StringEncoding];
     }
     
     return name;

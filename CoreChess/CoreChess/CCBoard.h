@@ -9,46 +9,60 @@
 #ifndef CCBOARD_H
 #define CCBOARD_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "CCBitboard.h"
 #include "CCPiece.h"
 
-struct CCBoard
-{
-    // State Bitboards	
-    CCBitboard pawnsBB_[2];	
-    CCBitboard knightsBB_[2];
-    CCBitboard bishopsBB_[2];
-    CCBitboard rooksBB_[2];
-    CCBitboard queensBB_[2];
-    CCBitboard kingsBB_[2];
+struct _CCBoard;
+typedef const struct _CCBoard* CCBoardRef;
+typedef struct _CCBoard* CCMutableBoardRef;
     
-    // Array for easy identification of a Square's occupancy
-    CCColoredPiece pieceForSquare_[64];
-};
-typedef struct CCBoard* CCBoardRef;
- 
-CCBoardRef CCBoardCreate();
-CCBoardRef CCBoardCreateWithBoard(CCBoardRef board);
-void CCBoardFree(CCBoardRef board);
-BOOL CCBoardEqualToBoard(CCBoardRef board1, CCBoardRef board2);
+// Reference counting
+extern CCBoardRef CCBoardRetain(CCBoardRef board);
+extern void CCBoardRelease(CCBoardRef board);
+extern unsigned int CCBoardRetainCount(CCBoardRef board);
 
-void CCBoardClearSquare(CCBoardRef board, CCSquare square);
-void CCBoardSetSquareWithPiece(CCBoardRef board, CCSquare square, CCColoredPiece piece);
-void CCBoardMoveFromSquareToSquare(CCBoardRef board, CCSquare from, CCSquare to);
-CCColoredPiece CCBoardGetPieceAtSquare(CCBoardRef board, CCSquare square);
+// Initializiation.  Returns +1 Reference count
+extern CCBoardRef CCBoardCreate();
+extern CCMutableBoardRef CCBoardCreateMutable();
 
-CCBitboard* CCBoardGetBitboardPtrForSquare(CCBoardRef board, CCSquare square);
-CCBitboard* CCBoardGetBitboardPtrForColoredPiece(CCBoardRef board, CCColoredPiece piece);
+// Copy methods
+extern CCBoardRef CCBoardCreateWithBoard(CCBoardRef board);
+extern CCMutableBoardRef CCBoardCreateMutableCopy(CCBoardRef board);
 
-CCBitboard CCBoardGetBitboardForPiece(CCBoardRef board, CCPiece piece);
-CCBitboard CCBoardGetBitboardForSquare(CCBoardRef board, CCSquare square);
-CCBitboard CCBoardGetBitboardForColoredPiece(CCBoardRef board, CCColoredPiece piece);
+// Mutable Check
+extern BOOL CCBoardIsMutable(CCBoardRef board);
+
+// Comparing boards
+extern BOOL CCBoardEqualToBoard(CCBoardRef board1, CCBoardRef board2);
+
+// Editing the board
+extern void CCBoardClearSquare(CCMutableBoardRef board, CCSquare square);
+extern void CCBoardSetSquareWithPiece(CCMutableBoardRef board, CCSquare square, CCColoredPiece piece);
+extern void CCBoardMoveFromSquareToSquare(CCMutableBoardRef board, CCSquare from, CCSquare to);
+
+
+extern CCColoredPiece CCBoardGetPieceAtSquare(CCBoardRef board, CCSquare square);
+
+extern const CCBitboard* CCBoardGetBitboardPtrForSquare(CCBoardRef board, CCSquare square);
+extern const CCBitboard* CCBoardGetBitboardPtrForColoredPiece(CCBoardRef board, CCColoredPiece piece);
+
+extern CCBitboard CCBoardGetBitboardForPiece(CCBoardRef board, CCPiece piece);
+extern CCBitboard CCBoardGetBitboardForSquare(CCBoardRef board, CCSquare square);
+extern CCBitboard CCBoardGetBitboardForColoredPiece(CCBoardRef board, CCColoredPiece piece);
 
 /* Bitboard methods */
-CCBitboard CCBoardGetOccupiedSquares(CCBoardRef board);
-CCBitboard CCBoardGetOccupiedSquaresForColor(CCBoardRef board, CCColor color);
-CCBitboard CCBoardGetEmptySquares(CCBoardRef board);
+extern CCBitboard CCBoardGetOccupiedSquares(CCBoardRef board);
+extern CCBitboard CCBoardGetOccupiedSquaresForColor(CCBoardRef board, CCColor color);
+extern CCBitboard CCBoardGetEmptySquares(CCBoardRef board);
 
-NSString * NSStringFromCCBoard(CCBoardRef board);
+extern NSString * NSStringFromCCBoard(CCBoardRef board);
+    
+#ifdef __cplusplus
+}
+#endif
 
 #endif

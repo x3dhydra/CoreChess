@@ -78,10 +78,10 @@ CCBitboard CCBitboardForSquare(CCSquare s);
 extern CCBitboard ranksBB(unsigned char rank);
 extern CCBitboard filesBB(unsigned char file);
 
-CCSquare CCSquareForBitboard(CCBitboard);
-int CCBitboardPopulationCount(CCBitboard);
+extern CCSquare CCSquareForBitboard(CCBitboard);
+extern int CCBitboardPopulationCount(CCBitboard);
 
-NSString * NSStringFromCCBitboard(CCBitboard);
+extern NSString * NSStringFromCCBitboard(CCBitboard);
 extern void print_hex(CCBitboard bb);
 extern void print_bitboard(CCBitboard bb);
 

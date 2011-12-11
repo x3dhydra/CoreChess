@@ -8,29 +8,71 @@
 
 #import "CCBoard.h"
 
-void CCBoardClearSquare(CCBoardRef board, CCSquare square)
+
+struct _CCBoard
+{
+    unsigned short _retainCount;
+    unsigned char  _mutable;
+    
+    // State Bitboards	
+    CCBitboard pawnsBB_[2];	
+    CCBitboard knightsBB_[2];
+    CCBitboard bishopsBB_[2];
+    CCBitboard rooksBB_[2];
+    CCBitboard queensBB_[2];
+    CCBitboard kingsBB_[2];
+    
+    // Array for easy identification of a Square's occupancy
+    CCColoredPiece pieceForSquare_[64];
+};
+
+// More declarations
+void CCBoardFree(CCBoardRef board);
+CCBitboard * _CCBoardGetBitboardPtrForColoredPiece(CCMutableBoardRef board, CCColoredPiece coloredPiece);
+
+#pragma mark - Reference Counting
+
+CCBoardRef CCBoardRetain(CCBoardRef board)
+{
+    ((CCMutableBoardRef)board)->_retainCount += 1;
+    return board;
+}
+
+void CCBoardRelease(CCBoardRef board)
+{
+    ((CCMutableBoardRef)board)->_retainCount -= 1;
+    if (board->_retainCount == 0)
+        CCBoardFree(board);
+}
+
+unsigned int CCBoardRetainCount(CCBoardRef board)
+{
+    return board->_retainCount;
+}
+
+void CCBoardClearSquare(CCMutableBoardRef board, CCSquare square)
 {
     CCColoredPiece piece = CCBoardGetPieceAtSquare(board, square);
     if (!CCColoredPieceIsValid(piece)) return; // Break early if the square is unoccupied
     
-    CCBitboard *bitboard = CCBoardGetBitboardPtrForColoredPiece(board, piece);
+    CCBitboard *bitboard = _CCBoardGetBitboardPtrForColoredPiece(board, piece);
     CCBitboard squareBitboard = CCBitboardForSquare(square);
     (*bitboard) &= ~squareBitboard;
     board->pieceForSquare_[(int)square] = NoColoredPiece;
 }
 
-void CCBoardSetSquareWithPiece(CCBoardRef board, CCSquare square, CCColoredPiece piece)
+void CCBoardSetSquareWithPiece(CCMutableBoardRef board, CCSquare square, CCColoredPiece piece)
 {
     CCBoardClearSquare(board, square);
     if (!CCColoredPieceIsValid(piece)) return; // Break early if piece is invalid - equivalent to just a call to clear the square
     
-    CCBitboard *bitboard = CCBoardGetBitboardPtrForColoredPiece(board, piece);
+    CCBitboard *bitboard = _CCBoardGetBitboardPtrForColoredPiece(board, piece);
     CCBitboard squareBitboard = CCBitboardForSquare(square);
     (*bitboard) |= squareBitboard;
     board->pieceForSquare_[(int)square] = piece;
 }
 
-void CCBoardMoveFromSquareToSquare(CCBoardRef board, CCSquare from, CCSquare to)
+void CCBoardMoveFromSquareToSquare(CCMutableBoardRef board, CCSquare from, CCSquare to)
 {
     CCColoredPiece piece = CCBoardGetPieceAtSquare(board, from);
     if (!CCColoredPieceIsValid(piece)) return; // Has to be a piece at the from square
@@ -46,15 +88,20 @@ CCColoredPiece CCBoardGetPieceAtSquare(CCBoardRef board, CCSquare square)
     return board->pieceForSquare_[(int)square];
 }
 
-CCBitboard* CCBoardGetBitboardPtrForSquare(CCBoardRef board, CCSquare square)
+const CCBitboard* CCBoardGetBitboardPtrForSquare(CCBoardRef board, CCSquare square)
 {
     CCColoredPiece piece = CCBoardGetPieceAtSquare(board, square);
-    if (!CCPieceIsValid(piece)) return nil;
+    if (!CCPieceIsValid((CCPiece)piece)) return nil;
     
     return CCBoardGetBitboardPtrForColoredPiece(board, piece);
 }
 
-CCBitboard* CCBoardGetBitboardPtrForColoredPiece(CCBoardRef board, CCColoredPiece coloredPiece)
+const CCBitboard* CCBoardGetBitboardPtrForColoredPiece(CCBoardRef board, CCColoredPiece coloredPiece)
+{
+    return _CCBoardGetBitboardPtrForColoredPiece((CCMutableBoardRef)board, coloredPiece);
+}
+
+CCBitboard * _CCBoardGetBitboardPtrForColoredPiece(CCMutableBoardRef board, CCColoredPiece coloredPiece)
 {
     int index = CCColorGetIndex(CCColoredPieceGetColor(coloredPiece));
     CCPiece piece = CCColoredPieceGetPiece(coloredPiece);
@@ -76,6 +123,7 @@ CCBitboard* CCBoardGetBitboardPtrForColoredPiece(CCBoardRef board, CCColoredPiec
         default:
             return nil;
     }
+
 }
 
 CCBitboard CCBoardGetBitboardForPiece(CCBoardRef board, CCPiece piece)
@@ -138,21 +186,32 @@ BOOL CCBoardEqualToBoard(CCBoardRef board1, CCBoardRef board2)
 
 CCBoardRef CCBoardCreate()
 {
-    CCBoardRef board = (CCBoardRef)calloc(1, sizeof(struct CCBoard));
-    //CCBoardRef board = (CCBoardRef)malloc(sizeof(struct CCBoard));
-//    board->pawnsBB_[0] = EmptyBB; board->pawnsBB_[1] = EmptyBB;
-//    board->knightsBB_[0] = EmptyBB; board->knightsBB_[1] = EmptyBB;
-//    board->bishopsBB_[0] = EmptyBB; board->bishopsBB_[1] = EmptyBB;
-//    board->rooksBB_[0] = EmptyBB; board->rooksBB_[1] = EmptyBB;
-//    board->queensBB_[0] = EmptyBB; board->queensBB_[1] = EmptyBB;
-//    board->kingsBB_[0] = EmptyBB; board->kingsBB_[1] = EmptyBB;
+    CCBoardRef board = (CCBoardRef)calloc(1, sizeof(struct _CCBoard));
+    CCBoardRetain(board);
+    return board;
+}
+
+CCMutableBoardRef CCBoardCreateMutable()
+{
+    CCMutableBoardRef board = (CCMutableBoardRef)CCBoardCreate();
+    board->_mutable = YES;
+    return board;
+}
+
+inline CCBoardRef CCBoardCreateWithBoard(CCBoardRef otherBoard)
+{
+    if (!CCBoardIsMutable(otherBoard))
+        return CCBoardRetain(otherBoard);
+    
+    CCMutableBoardRef board = CCBoardCreateMutableCopy(otherBoard);
+    board->_mutable = NO;
     
     return board;
 }
 
-CCBoardRef CCBoardCreateWithBoard(CCBoardRef otherBoard)
+CCMutableBoardRef CCBoardCreateMutableCopy(CCBoardRef otherBoard)
 {
-    CCBoardRef board = CCBoardCreate();
+    CCMutableBoardRef board = CCBoardCreateMutable();
     
     board->pawnsBB_[0]   = otherBoard->pawnsBB_[0];
     board->pawnsBB_[1]   = otherBoard->pawnsBB_[1];   
@@ -178,7 +237,14 @@ CCBoardRef CCBoardCreateWithBoard(CCBoardRef otherBoard)
 
 void CCBoardFree(CCBoardRef board)
 {
-    free(board);
+    free((void *)board);
+}
+
+#pragma mark - Mutability
+
+inline BOOL CCBoardIsMutable(CCBoardRef board)
+{
+    return board->_mutable;
 }
 
 #pragma mark - NSString
