@@ -25,12 +25,12 @@ extern CCBoardRef CCBoardRetain(CCBoardRef board);
 extern void CCBoardRelease(CCBoardRef board);
 extern unsigned int CCBoardRetainCount(CCBoardRef board);
 
-// Initializiation.  Returns +1 Reference count
-extern CCBoardRef CCBoardCreate();
-extern CCMutableBoardRef CCBoardCreateMutable();
+// Initializiation.  Returns +1 retain count
+extern CCBoardRef CCBoardCreate(void);
+extern CCMutableBoardRef CCBoardCreateMutable(void);
 
 // Copy methods
-extern CCBoardRef CCBoardCreateWithBoard(CCBoardRef board);
+extern CCBoardRef CCBoardCreateCopy(CCBoardRef board);
 extern CCMutableBoardRef CCBoardCreateMutableCopy(CCBoardRef board);
 
 // Mutable Check

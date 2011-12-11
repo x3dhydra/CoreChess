@@ -198,7 +198,7 @@ CCMutableBoardRef CCBoardCreateMutable()
     return board;
 }
 
-inline CCBoardRef CCBoardCreateWithBoard(CCBoardRef otherBoard)
+inline CCBoardRef CCBoardCreateCopy(CCBoardRef otherBoard)
 {
     if (!CCBoardIsMutable(otherBoard))
         return CCBoardRetain(otherBoard);
