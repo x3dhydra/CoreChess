@@ -18,17 +18,17 @@ CCBitboard CCBoardGetSlidingAttacksForSquare(CCBoardRef board, CCSquare square)
 
 CCBitboard CCBoardGetPawnAttacksForColor(CCBoardRef board, CCColor color)
 {
-    CCColoredPiece piece = (color == White) ? WP : BP;
+    CCColoredPiece piece = (color == CCWhite) ? WP : BP;
     CCBitboard pawns = CCBoardGetBitboardForColoredPiece(board, piece);
-    return (color == White) ? CCBitboardGetWhitePawnAttacks(pawns) : CCBitboardGetBlackPawnAttacks(pawns);
+    return (color == CCWhite) ? CCBitboardGetWhitePawnAttacks(pawns) : CCBitboardGetBlackPawnAttacks(pawns);
 }
 
 CCBitboard CCBoardGetPawnPushesForColor(CCBoardRef board, CCColor color)
 {
-    CCColoredPiece piece = (color == White) ? WP : BP;
+    CCColoredPiece piece = (color == CCWhite) ? WP : BP;
     CCBitboard empty = CCBoardGetEmptySquares(board);
     CCBitboard pawns = CCBoardGetBitboardForColoredPiece(board, piece);
-    return (color == White) ? CCBitboardGetWhitePawnPushTargets(pawns, empty) : CCBitboardGetBlackPawnPushTargets(pawns, empty);
+    return (color == CCWhite) ? CCBitboardGetWhitePawnPushTargets(pawns, empty) : CCBitboardGetBlackPawnPushTargets(pawns, empty);
 }
 
 CCBitboard CCBoardGetAttacksFromSquare(CCBoardRef board, CCSquare square)
@@ -104,16 +104,16 @@ CCBitboard CCBoardGetPseudoLegalMovesFromSquare(CCBoardRef board, CCSquare squar
     
     if (CCPieceEqualToPiece(type, PawnPiece))
     {
-        if (color == White)
+        if (color == CCWhite)
         {
             CCBitboard pushes = CCBitboardGetWhitePawnPushTargets(CCBitboardForSquare(square), CCBoardGetEmptySquares(board));
-            CCBitboard attacks = CCBitboardPawnAttacksFromSquareForColor(square, White) & CCBoardGetOccupiedSquaresForColor(board, Black);
+            CCBitboard attacks = CCBitboardPawnAttacksFromSquareForColor(square, CCWhite) & CCBoardGetOccupiedSquaresForColor(board, CCBlack);
             b = pushes | attacks;
         }
         else
         {
             CCBitboard pushes = CCBitboardGetBlackPawnPushTargets(CCBitboardForSquare(square), CCBoardGetEmptySquares(board));
-            CCBitboard attacks = CCBitboardPawnAttacksFromSquareForColor(square, Black) & CCBoardGetOccupiedSquaresForColor(board, White);
+            CCBitboard attacks = CCBitboardPawnAttacksFromSquareForColor(square, CCBlack) & CCBoardGetOccupiedSquaresForColor(board, CCWhite);
             b = pushes | attacks;
         }
     }
@@ -149,7 +149,7 @@ CCBitboard CCBoardGetPseudoLegalMovesToSquareForPiece(CCBoardRef board, CCSquare
         // Unoccupied - only interested in pawn push targets
         if (occupant == NoColoredPiece)
         {
-            if (CCColoredPieceGetColor(piece) == White)
+            if (CCColoredPieceGetColor(piece) == CCWhite)
             {
                 // Check for a pawn that can advance a single square
                 CCBitboard whitePawns = CCBoardGetBitboardForColoredPiece(board, WP);

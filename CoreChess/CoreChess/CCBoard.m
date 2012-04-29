@@ -128,8 +128,8 @@ CCBitboard * _CCBoardGetBitboardPtrForColoredPiece(CCMutableBoardRef board, CCCo
 
 CCBitboard CCBoardGetBitboardForPiece(CCBoardRef board, CCPiece piece)
 {
-    return CCBoardGetBitboardForColoredPiece(board, CCColoredPieceMake(White, piece)) |
-           CCBoardGetBitboardForColoredPiece(board, CCColoredPieceMake(Black, piece));
+    return CCBoardGetBitboardForColoredPiece(board, CCColoredPieceMake(CCWhite, piece)) |
+           CCBoardGetBitboardForColoredPiece(board, CCColoredPieceMake(CCBlack, piece));
 }
 
 CCBitboard CCBoardGetBitboardForSquare(CCBoardRef board, CCSquare square)
@@ -147,7 +147,7 @@ CCBitboard CCBoardGetBitboardForColoredPiece(CCBoardRef board, CCColoredPiece pi
 
 CCBitboard CCBoardGetOccupiedSquares(CCBoardRef board)
 {
-    return CCBoardGetOccupiedSquaresForColor(board, White) | CCBoardGetOccupiedSquaresForColor(board, Black);
+    return CCBoardGetOccupiedSquaresForColor(board, CCWhite) | CCBoardGetOccupiedSquaresForColor(board, CCBlack);
 }
 
 CCBitboard CCBoardGetOccupiedSquaresForColor(CCBoardRef board, CCColor color)

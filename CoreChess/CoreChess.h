@@ -11,3 +11,4 @@
 #import "CoreChess/CCCastlingRights.h"
 #import "CoreChess/CCPiece.h"
 #import "CoreChess/CCSquare.h"
+#import "CoreChess/CCBoard+MoveGeneration.h"

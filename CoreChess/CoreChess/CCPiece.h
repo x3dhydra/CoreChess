@@ -33,8 +33,8 @@ char CCPieceChar(CCPiece piece);
 // Color
 enum CCColorMask
 {
-    White = 0,
-    Black = 8
+    CCWhite = 0,
+    CCBlack = 8
 };
 typedef enum CCColorMask CCColor;
 

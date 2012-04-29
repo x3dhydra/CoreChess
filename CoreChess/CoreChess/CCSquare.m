@@ -24,7 +24,8 @@ CCSquare CCSquareMake(signed char rank, signed char file) {
 
 CCSquare CCSquareForString(CFStringRef name)
 {
-    return CCSquareMakeForString(CFStringGetCStringPtr(name, kCFStringEncodingUTF8));    
+    const char * string = [(__bridge NSString *)name cStringUsingEncoding:NSUTF8StringEncoding];
+    return CCSquareMakeForString(string);    
 }
 
 /* Creates a CCSquare from a string representation of the CCSquare.  */

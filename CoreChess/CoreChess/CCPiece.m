@@ -70,7 +70,7 @@ char CCPieceChar(CCPiece piece)
 
 unsigned char CCColorGetIndex(CCColor color)
 {
-    return (color == White) ? 0 : 1;
+    return (color == CCWhite) ? 0 : 1;
 }
 
 CCColor CCColorGetOpposite(CCColor color)

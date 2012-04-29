@@ -53,7 +53,7 @@ CCBitboard CCBitboardGetBlackPawnAttacksToSquare(CCBitboard blackPawns, CCSquare
 CCBitboard CCBitboardPawnAttacksFromSquareForColor(CCSquare square, CCColor color)
 {
     CCBitboard squareBB = CCBitboardForSquare(square);
-    if (color == White) 
+    if (color == CCWhite) 
         return CCBitboardGetWhitePawnAttacks(squareBB);
     else
         return CCBitboardGetBlackPawnAttacks(squareBB);
