@@ -820,7 +820,7 @@ NSString * NSStringFromCCBitboard(CCBitboard bitboard)
     // 8th rank */
     for (int r = 7; r >= 0 ; r--) {
         for (int f = 0; f < 8; f++) {
-            char c = (bitboard & SquaresBB[r*8 + f]) != 0 ? '0' : '*';
+            char c = (bitboard & SquaresBB[r*8 + f]) != 0 ? 'X' : '*';
             [string appendFormat:@"%c ", c];
         } 
         [string appendFormat:@"\n"];

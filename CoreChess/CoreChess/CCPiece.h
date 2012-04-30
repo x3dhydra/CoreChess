@@ -67,4 +67,6 @@ BOOL CCColoredPieceIsKindOfColor(CCColoredPiece piece, CCColor color);
 
 char CCColoredPieceGetCharacter(CCColoredPiece piece);
 
+extern NSIndexSet *CCPieceGetAllPieces();
+
 #endif

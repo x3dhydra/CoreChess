@@ -160,3 +160,15 @@ char CCColoredPieceGetCharacter(CCColoredPiece piece)
         default :  return '*';
     }
 }
+
+NSIndexSet * CCPieceGetAllPieces()
+{
+    static NSMutableIndexSet *set = nil;
+    if (!set)
+    {
+        set = [[NSMutableIndexSet alloc] init];
+        [set addIndexesInRange:NSMakeRange(WP, WK - WP + 1)];
+        [set addIndexesInRange:NSMakeRange(BP, BK - BP + 1)];
+    }
+    return set;
+}

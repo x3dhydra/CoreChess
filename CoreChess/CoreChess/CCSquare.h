@@ -67,6 +67,8 @@ extern CCSquare CCSquareSouthWestOne(CCSquare s);
  Invalid_Square_Exception otherwise */
 inline BOOL in_range(CCSquare s) { return ((a1 <= s) && (h8 >= s)); }
 
+extern BOOL CCSquareIsLightSquare(CCSquare square);
+
 #ifdef __cplusplus
 }
 #endif

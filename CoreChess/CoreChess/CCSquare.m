@@ -70,6 +70,13 @@ int CCSquareFile(CCSquare s) { return s % 8; }
 
 BOOL CCSquareIsValid(CCSquare square) { return square != InvalidSquare; }
 
+BOOL CCSquareIsLightSquare(CCSquare square) 
+{
+    int rank = CCSquareRank(square);
+    int file = CCSquareFile(square);
+    return rank % 2 != file % 2;
+}
+
 #pragma mark -
 #pragma mark CCSquare shifts
 
