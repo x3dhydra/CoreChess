@@ -258,7 +258,7 @@ CCBitboard CCBitboardGetAbsolutePinsOfColor(CCBoardRef board, CCColor color)
     for (int i = 0; i < 4; i++)
     {
         ray = generate_ray(square, lines[i]);
-        sliders = CCBitboardGetSlidingAttacks(op_occ, RookPiece, square);
+        sliders = CCBitboardGetSlidingAttacks(op_occ, RookPiece, square) & ray;
         if (sliders & straightAttacks)
         {
             blockers = sliders & occ;
