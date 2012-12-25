@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		191FC1EE149407B100FB4F8E /* CCBitboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E5149407B100FB4F8E /* CCBitboard.h */; };
+		191FC1EE149407B100FB4F8E /* CCBitboard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E5149407B100FB4F8E /* CCBitboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC1EF149407B100FB4F8E /* CCBitboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1E6149407B100FB4F8E /* CCBitboard.m */; };
-		191FC1F0149407B100FB4F8E /* CCBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E7149407B100FB4F8E /* CCBoard.h */; };
+		191FC1F0149407B100FB4F8E /* CCBoard.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E7149407B100FB4F8E /* CCBoard.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC1F1149407B100FB4F8E /* CCBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1E8149407B100FB4F8E /* CCBoard.m */; };
-		191FC1F2149407B100FB4F8E /* CCCastlingRights.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E9149407B100FB4F8E /* CCCastlingRights.h */; };
-		191FC1F3149407B100FB4F8E /* CCPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EA149407B100FB4F8E /* CCPiece.h */; };
+		191FC1F2149407B100FB4F8E /* CCCastlingRights.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1E9149407B100FB4F8E /* CCCastlingRights.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191FC1F3149407B100FB4F8E /* CCPiece.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EA149407B100FB4F8E /* CCPiece.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC1F4149407B100FB4F8E /* CCPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1EB149407B100FB4F8E /* CCPiece.m */; };
-		191FC1F5149407B100FB4F8E /* CCSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EC149407B100FB4F8E /* CCSquare.h */; };
+		191FC1F5149407B100FB4F8E /* CCSquare.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC1EC149407B100FB4F8E /* CCSquare.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC1F6149407B100FB4F8E /* CCSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC1ED149407B100FB4F8E /* CCSquare.m */; };
 		191FC202149431C000FB4F8E /* CCPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC201149431C000FB4F8E /* CCPosition.m */; };
-		191FC204149431CF00FB4F8E /* CCPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC203149431CF00FB4F8E /* CCPosition.h */; };
-		191FC23A14946D5A00FB4F8E /* CCBitboard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23614946D5900FB4F8E /* CCBitboard+MoveGeneration.h */; };
+		191FC204149431CF00FB4F8E /* CCPosition.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC203149431CF00FB4F8E /* CCPosition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		191FC23A14946D5A00FB4F8E /* CCBitboard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23614946D5900FB4F8E /* CCBitboard+MoveGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC23B14946D5A00FB4F8E /* CCBitboard+MoveGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC23714946D5900FB4F8E /* CCBitboard+MoveGeneration.m */; };
-		191FC23C14946D5A00FB4F8E /* CCBoard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23814946D5900FB4F8E /* CCBoard+MoveGeneration.h */; };
+		191FC23C14946D5A00FB4F8E /* CCBoard+MoveGeneration.h in Headers */ = {isa = PBXBuildFile; fileRef = 191FC23814946D5900FB4F8E /* CCBoard+MoveGeneration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		191FC23D14946D5A00FB4F8E /* CCBoard+MoveGeneration.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FC23914946D5900FB4F8E /* CCBoard+MoveGeneration.m */; };
 		19F27747146DAA7200B58AB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27746146DAA7200B58AB1 /* Foundation.framework */; };
 		19F27755146DAA7200B58AB1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27754146DAA7200B58AB1 /* SenTestingKit.framework */; };
@@ -29,6 +29,7 @@
 		19F2775B146DAA7200B58AB1 /* libCoreChess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F27743146DAA7200B58AB1 /* libCoreChess.a */; };
 		19F27761146DAA7200B58AB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19F2775F146DAA7200B58AB1 /* InfoPlist.strings */; };
 		19F27764146DAA7200B58AB1 /* CoreChessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F27763146DAA7200B58AB1 /* CoreChessTests.m */; };
+		A0439352162A0D0B00833F68 /* CoreChess.h in Headers */ = {isa = PBXBuildFile; fileRef = 19F2774B146DAA7200B58AB1 /* CoreChess.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -196,6 +197,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0439352162A0D0B00833F68 /* CoreChess.h in Headers */,
 				191FC1EE149407B100FB4F8E /* CCBitboard.h in Headers */,
 				191FC1F0149407B100FB4F8E /* CCBoard.h in Headers */,
 				191FC1F2149407B100FB4F8E /* CCCastlingRights.h in Headers */,
